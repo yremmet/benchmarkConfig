@@ -99,19 +99,10 @@
 			<artifactId>jjwt</artifactId>
 			<version>0.6.0</version>
 		</dependency>
-
-
-
-
 		<dependency>
 			<groupId>io.netty</groupId>
 			<artifactId>netty-all</artifactId>
 			<version>4.0.30.Final</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.data</groupId>
-			<artifactId>spring-data-jpa</artifactId>
-			<version>1.9.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.data</groupId>
@@ -130,21 +121,7 @@
 			<artifactId>snakeyaml</artifactId>
 			<version>1.17</version>
 		</dependency>
-		<dependency>
-			<groupId>org.springframework.amqp</groupId>
-			<artifactId>spring-amqp</artifactId>
-			<version>1.5.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.amqp</groupId>
-			<artifactId>spring-amqp</artifactId>
-			<version>1.5.1.RELEASE</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.amqp</groupId>
-			<artifactId>spring-amqp</artifactId>
-			<version>1.5.1.RELEASE</version>
-		</dependency>
+
 
 		<!-- AMQP -->
 		<dependency>
@@ -152,6 +129,11 @@
 			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
 
+		<dependency>
+			<groupId>org.springframework.amqp</groupId>
+			<artifactId>spring-amqp</artifactId>
+			<version>1.5.1.RELEASE</version>
+		</dependency>
 		<!-- Mongo DB -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
