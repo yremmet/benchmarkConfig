@@ -1,0 +1,6 @@
+CREATE TABLE Runner (
+  id BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  hostname VARCHAR(50),
+  username VARCHAR(50),
+  sshKey   VARCHAR(255)
+  )

@@ -1,0 +1,16 @@
+{
+	"RunnerId": 1,
+	"AmqpUser": "admin",
+	"AmqpPassword" :  "wakeful.bogota.slid.doll",
+	"AmqpHost": "185.80.184.75",
+	"AmqpPort": 5672,
+	"RunQueue": "benchmark.runBenchmark",
+	"ResponseTopic": "runner.response",
+	"MongoHost"  : "localhost",
+	"Database" : "Benchmark",
+    "AuthDatabase" : "admin",
+    "AuthUserName" : "admin",
+    "AuthPassword" : "husking.durable.taste.transmit",
+	"Collection": "result",
+	"ResultFolder" : "/home/ubuntu/runs/"
+}

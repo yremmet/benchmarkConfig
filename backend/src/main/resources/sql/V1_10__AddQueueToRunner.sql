@@ -1,0 +1,2 @@
+ALTER TABLE Runner
+  ADD COLUMN queue VARCHAR(35);

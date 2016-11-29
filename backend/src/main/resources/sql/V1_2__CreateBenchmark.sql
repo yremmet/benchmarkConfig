@@ -1,0 +1,12 @@
+CREATE TABLE Benchmark (
+  benchmarkid BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  benchmarkName VARCHAR(255) NOT NULL UNIQUE
+);
+
+CREATE TABLE VMGroup (
+  id BIGINT(20) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+  groupName VARCHAR(255) NOT NULL,
+  benchmarkId BIGINT(20) NOT NULL,
+  CONSTRAINT benchmarkId
+  FOREIGN KEY (benchmarkId) REFERENCES Benchmark (benchmarkid)
+);

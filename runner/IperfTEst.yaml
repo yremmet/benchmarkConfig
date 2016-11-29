@@ -1,0 +1,17 @@
+00-1: &1
+   OpenStack: 
+      machine_type: gp.small
+      zone: zone01
+01-iperf: &2
+   vm_groups: 
+      vm_2: 
+         cloud: OpenStack
+         vm_spec: *1
+      vm_1: 
+         cloud: OpenStack
+         vm_spec: *1
+   flags: 
+      iperf_runtime_in_seconds: 10
+      iperf_sending_thread_count: 1
+benchmarks: 
+-  iperf: *2
