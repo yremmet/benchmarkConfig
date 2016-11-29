@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
 import { Benchmark } from './classes/benchmark';
 import { BenchmarkDetailComponent } from './components/benchmark-detail.component';
+import { BenchmarkService } from './services/benchmark.service';
 
 
 @Component({
   selector: 'my-app',
   template: `
   <h1>{{title}}</h1>
-  <h2>{{selectedBenchmark.name}}</h2>
   <benchmark-detail [benchmark]="selectedBenchmark"></benchmark-detail>
    <ul class="benchmarks">
     <li *ngFor="let benchmark of benchmarks"
@@ -65,29 +65,31 @@ import { BenchmarkDetailComponent } from './components/benchmark-detail.componen
     margin-right: .8em;
     border-radius: 4px 0 0 4px;
   }
-`]
+`],
+  providers: [BenchmarkService]
+
 })
 export class AppComponent  { 
   title = 'Benchmarks';
-  selectedBenchmark: Benchmark=BENCHMARKS[0];
-  benchmarks = BENCHMARKS;
+  selectedBenchmark: Benchmark;
+  benchmarks : Benchmark[];
+  
+  constructor(private benchmarkService: BenchmarkService) { }
+
+  getBenchmarks(): void {
+    this.benchmarkService.getHeroes().then(b => this.benchmarks = b);
+  }
+  ngOnInit(): void {
+    this.getBenchmarks();
+  }
   
   onSelect(benchmark: Benchmark): void {
     this.selectedBenchmark = benchmark;
   }
+
+  
 }
 
 
 
-const BENCHMARKS: Benchmark[] = [
-  { id: 11, name: 'Mr. Nice' },
-  { id: 12, name: 'Narco' },
-  { id: 13, name: 'Bombasto' },
-  { id: 14, name: 'Celeritas' },
-  { id: 15, name: 'Magneta' },
-  { id: 16, name: 'RubberMan' },
-  { id: 17, name: 'Dynama' },
-  { id: 18, name: 'Dr IQ' },
-  { id: 19, name: 'Magma' },
-  { id: 20, name: 'Tornado' }
-];
+
