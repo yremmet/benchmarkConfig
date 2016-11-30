@@ -1,0 +1,8 @@
+<div *ngIf="benchmark">
+    <h2>{{benchmark.name}} details!</h2>
+    <div><label>id: </label>{{benchmark.id}}</div>
+    <div>
+        <label>name: </label>
+        <input [(ngModel)]="benchmark.name" placeholder="name"/>
+    </div>
+</div>
