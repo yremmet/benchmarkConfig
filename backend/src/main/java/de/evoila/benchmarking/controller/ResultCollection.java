@@ -34,7 +34,7 @@ public class ResultCollection extends HashMap<String, ValueCollection> implement
 
 
     @Override
-    public Iterator<ValueCollection> iterator() {
+     public Iterator<ValueCollection> iterator() {
         return new Iterator<ValueCollection>() {
             public Iterator<String> iterator = keySet().iterator();
 

@@ -1,6 +1,7 @@
 package de.evoila.benchmarking.data.runner;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.data.mongodb.repository.Query;
 import org.springframework.data.repository.query.Param;
 
 import java.util.List;
@@ -14,4 +15,7 @@ public interface ResultRepository extends MongoRepository<Result,String> {
     List<Result> findByTestOrderByMetric(@Param("test") String test);
     List<Result> findByRunId(@Param("runid") Long runId);
     List<Result> findByTestAndMetric(String test, String metric);
+
+    List<Result> findByRunIdAndMetric(Long runId, String metric);
+
 }

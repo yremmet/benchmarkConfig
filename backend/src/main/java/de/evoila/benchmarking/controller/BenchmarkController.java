@@ -47,5 +47,4 @@ public class BenchmarkController {
 
 		return  new ResponseEntity<Object>(result, HttpStatus.OK);
 	}
-
 }

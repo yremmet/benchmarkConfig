@@ -52,7 +52,7 @@ public class BenchmarkApplication {
      * Necessary for basic-auth to encrypt login data
      */
     
-    @Bean
+    /*@Bean
     public EmbeddedServletContainerFactory servletContainer() {
       TomcatEmbeddedServletContainerFactory tomcat = new TomcatEmbeddedServletContainerFactory() {
           @Override
@@ -68,7 +68,7 @@ public class BenchmarkApplication {
       
       tomcat.addAdditionalTomcatConnectors(initiateHttpConnector());
       return tomcat;
-    }
+    }*/
     /* Enable AMQP Reciver */
     @Bean
     SimpleMessageListenerContainer container(ConnectionFactory connectionFactory, Messaging messaging) {
@@ -95,6 +95,7 @@ public class BenchmarkApplication {
         container.setMessageListener(listenerAdapter);
         return container;
     }
+
 
     private Connector initiateHttpConnector() {
       Connector connector = new Connector("org.apache.coyote.http11.Http11NioProtocol");
