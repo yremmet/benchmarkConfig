@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChartComponent } from './components/chart.component';
 @Component({
   selector: 'my-app',
   template: `
@@ -9,6 +10,7 @@ import { Component } from '@angular/core';
    </nav>
     
    <router-outlet></router-outlet>
+   <chart>
   `
   
 })
